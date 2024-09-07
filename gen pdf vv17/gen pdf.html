@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>v17</title>
+    <style>
+        .styled-hr {
+            width: 100%;             /* Full width */
+            height: 2px;             /* Thickness of the line */
+            background-color: black; /* Line color */
+            margin: 16px 0;          /* Spacing above and below the line */
+        }
+        /* From Uiverse.io by Pradeepsaranbishnoi */ 
+/* From Uiverse.io by Madflows */ 
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+body{
+    background-color: ghostwhite;
+}
+
+
+    </style>
+</head>
+<body>
+<div  class="max-w-2xl mx-auto p-4 bg-card text-foreground rounded-lg shadow-lg">
+    <div class="text-center mb-4">
+        <img style="width: 250px;height: 150px;" src="image1/logo.png" alt="Vel Tech Logo" class="mx-auto mb-2" />
+        <h1 class="text-2xl font-bold">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</h1>
+        <h2 class="text-xl font-semibold">SCHOOL OF COMPUTING</h2>
+        <h3 class="text-lg">10214CS501 - COMMUNITY SERVICE PROJECT</h3>
+        <h4 class="text-lg">B.Tech-CSE</h4>
+        <p class="text-md mt-2">Academic Year : 2022-23 (Winter Semester)</p>
+        <h5 class="text-lg font-semibold mt-4">Project Supervisor Selection Form – COMMUNITY SERVICE PROJECT</h5>
+    </div>
+    <p class="text-md mb-4">I read and understood the guidelines in the B.Tech. VTR-21 Regulations. The details of our Community Service Project area of work:</p>
+    <h6 class="font-semibold">PROJECT DETAILS:</h6><br>
+    <div class="mb-4 flex items-center">
+        <label class="block w-1/3">TITLE:</label>
+        <input type="text" id="title"  class="border border-border rounded p-2 w-2/3" required/> 
+    </div>
+    <div class="mb-4 flex items-center">
+        <label class="block w-1/3">MAJOR AREA (Domain):</label>
+        <input type="text" id="major-area" class="border border-border rounded p-2 w-2/3" required />
+    </div>
+    <div class="mb-4 flex items-center">
+        <label class="block w-1/3">SPECIFIC AREA:</label>
+        <input type="text" id="specific-area" class="border border-border rounded p-2 w-2/3" required/>
+    </div>
+    <p class="text-md mb-4">I hereby declare that I will follow the procedures and guidelines pertaining to Community Service Project. I also declare that Community Service Project will be carried out by myself with the guidance of the internal supervisor.</p>
+    <h6 class="font-semibold">STUDENT DETAILS</h6>
+    <table class="min-w-full border-collapse border border-border mb-4">
+        <thead>
+            <tr>
+                <th class="border border-border p-2">S.No</th>
+                <th class="border border-border p-2">VTU No</th>
+                <th class="border border-border p-2">Register No</th>
+                <th class="border border-border p-2">Name of the Student</th>
+                <th class="border border-border p-2">Signature</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-border p-2">1.</td>
+                <td class="border border-border p-2"><input type="text" id="vtu-no-1" class="border border-border rounded w-full"required /></td>
+                <td class="border border-border p-2"><input type="text" id="reg-no-1" class="border border-border rounded w-full"required /></td>
+                <td class="border border-border p-2"><input type="text" id="name-1" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2">signature-1</td>
+            </tr>
+            <tr>
+                <td class="border border-border p-2">2.</td>
+                <td class="border border-border p-2"><input type="text" id="vtu-no-2" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2"><input type="text" id="reg-no-2" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2"><input type="text" id="name-2" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2">signature-2</td>
+            </tr>
+            <tr>
+                <td class="border border-border p-2">3.</td>
+                <td class="border border-border p-2"><input type="text" id="vtu-no-3" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2"><input type="text" id="reg-no-3" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2"><input type="text" id="name-3" class="border border-border rounded w-full" required/></td>
+                <td class="border border-border p-2">signature-3</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mb-4 flex items-center">
+        <label class="block w-1/3">NAME OF THE PROJECT SUPERVISOR:</label>
+        <input type="text" id="supervisor" class="border border-border rounded p-2 w-2/3" required />
+    </div>
+    <div class="mb-4 flex items-center">
+        <label class="block w-1/3">SIGNATURE:</label>
+    </div>
+    <div class="mt-6 flex justify-between">
+        <div>
+            <h4 class="font-semibold text-lg">OFFICE USE</h4>
+        </div>
+        <div  left: 100px;">
+            
+
+    </div>
+    <div  class="text-center mt-8">
+        <p class="mt-2">(Signature of the Head of the Dept.)</p>
+            <p class="text-right">Date:<input type="date" id="date" class="border border-border rounded p-2"  required/></p>
+
+        
+    </div>
+    
+</div>
+
+<button id="but"  onclick="generatePDF()"  class="button">
+  <span class="button-content">Download(Generate PDF) </span>
+</button>
+
+
+<script>
+
+function generatePDF() {
+
+    
+            // Collect input values
+            const title = document.getElementById("title").value;
+            const majorArea = document.getElementById("major-area").value;
+            const specificArea = document.getElementById("specific-area").value;
+            const vtuNos = [
+                document.getElementById("vtu-no-1").value,
+                document.getElementById("vtu-no-2").value,
+                document.getElementById("vtu-no-3").value
+            ];
+            const regNos = [
+                document.getElementById("reg-no-1").value,
+                document.getElementById("reg-no-2").value,
+                document.getElementById("reg-no-3").value
+            ];
+            const names = [
+                document.getElementById("name-1").value,
+                document.getElementById("name-2").value,
+                document.getElementById("name-3").value
+            ];
+            const supervisor = document.getElementById("supervisor").value;
+            const date = document.getElementById("date").value;
+
+            // Validation
+            if (!title || !majorArea || !specificArea || vtuNos.some(v => !v) || regNos.some(r => !r) || names.some(n => !n) || !supervisor) {
+                alert("Please fill all required fields.");
+                return;
+            }
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    // Collect input values
+    
+
+    const imgData = 'image1/logo.png'; 
+    doc.addImage(imgData, 'JPEG', 70, 10, 70, 30);
+    doc.setFontSize(12);
+    doc.setFont("timesNewRoman", "normal");    
+    doc.text("DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING", 105, 42, { align: "center" });
+    doc.text("SCHOOL OF COMPUTING", 105, 48, { align: "center" });
+    doc.text("10214CS501 - COMMUNITY SERVICE PROJECT", 105, 54, { align: "center" });
+    doc.text("B.Tech-CSE", 105, 60, { align: "center" });
+
+    doc.text("Academic Year : 2022-23 (Winter Semester)", 105, 70, { align: "center" });
+
+    doc.text("Project Supervisor Selection Form  COMMUNITY SERVICE PROJECT", 105, 80, { align: "center" });
+
+   
+doc.setFontSize(12); 
+
+
+doc.setFont("verdana", "normal");
+const combinedText = "I read and understood the guidelines in the B.Tech. VTR-21 Regulations. The" +
+                      "details of  our Community \n Service Project area of work:";
+
+doc.text(combinedText, 20, 94);
+
+doc.setFontSize(12);
+doc.text("PROJECT DETAILS:", 20, 108); 
+
+doc.setFontSize(10);
+doc.text(`TITLE: ${title}`, 20, 114);
+doc.line(20, 116, 190, 116); 
+
+doc.text(`MAJOR AREA (Domain): ${majorArea}`, 20, 124); // Pushed down from 114 to 124
+doc.line(20, 126, 190, 126); // Pushed down from 116 to 126
+
+doc.text(`SPECIFIC AREA:${specificArea}`, 20, 134); // Pushed down from 124 to 134
+doc.line(20, 136, 190, 136); // Pushed down from 126
+    doc.setFont("verdana", "normal");
+        const text = "I hereby declare that I will follow the procedures and guidelines pertaining to Community Service \n Project. I " +
+             " also declare that Community Service Project will" +
+             "be carried out by myself with the \n guidance of the  internal supervisor.";
+
+doc.text(text, 20, 144);
+
+    doc.text("STUDENT DETAILS:", 20, 166);
+    
+    // Table coordinates and dimensions
+    const startX = 20;
+const startY = 180;
+const tableWidth = 190 - startX; // Adjusted for page width
+const colWidths = [12, 30, 35, 60, 10]; // Column widths
+const rowHeight = 10;
+const numRows = 3; // Number of rows
+
+// Draw table outline
+doc.rect(startX, startY - 10, tableWidth, numRows * rowHeight + 11); // Table outline with space for numRows rows
+
+// Draw column headers
+doc.text("S.No", startX + 2, startY + 1);
+doc.text("VTU No", startX + colWidths[0] + 2, startY + 1);
+doc.text("Register No", startX + colWidths[0] + colWidths[1] + 2, startY + 1);
+doc.text("Name of the Student", startX + colWidths[0] + colWidths[1] + colWidths[2] + 2, startY + 1);
+doc.text("Signature", startX + colWidths[0] + colWidths[1] + colWidths[2] + colWidths[3] + 2, startY + 1);
+
+doc.line(startX, startY + 2, startX + tableWidth, startY + 2); // Header underline
+
+// Draw column lines
+let x = startX;
+for (const width of colWidths) {
+    doc.line(x, startY - 10, x, startY + numRows * rowHeight +1 ); // Vertical lines
+    x += width;
+}
+
+// Draw rows
+for (let i = 0; i <= 2; i++) {
+    const y = startY + 10 + (i * rowHeight);
+    doc.text(`${i + 1}.`, startX + 2, y);
+    doc.text(vtuNos[i], startX + colWidths[0] + 2, y);
+    doc.text(regNos[i], startX + colWidths[0] + colWidths[1] + 2, y);
+    doc.text(names[i], startX + colWidths[0] + colWidths[1] + colWidths[2] + 2, y);
+    doc.line(startX, y + 1, startX + tableWidth, y + 1);// Row underline
+}
+
+   // Coordinates for text and lines
+
+const textY1 = 222;
+const textY2 = 236;
+const textY3 = 250;
+const lineHeight = 6; // Space between text and line
+
+// Draw text and lines
+doc.text(`NAME OF THE PROJECT SUPERVISOR: ${supervisor}`, startX, textY1);
+doc.line(startX, textY1 + lineHeight, 190, textY1 + lineHeight); // Line straight and aligned
+
+doc.text("SIGNATURE:", startX, textY2);
+
+doc.text("OFFICE USE", startX, textY3);
+
+    doc.text("(Signature of the Head of the Dept.)", 20, 265);
+    doc.text(`Date: ${date}`, 160, 265);
+
+    doc.save("Community_Service_Project.pdf");
+}
+
+    </script>
+</body>
+</html>
+
+
+
