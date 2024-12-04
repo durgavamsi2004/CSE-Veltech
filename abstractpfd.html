@@ -7,6 +7,48 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
+    <style>.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+  body{
+      background-color: ghostwhite;
+  }</style>
 <body>
     <div class="max-w-4xl mx-auto p-6 bg-card text-card-foreground rounded-lg shadow-lg relative">
       <img style="width: 250px;height: 90px;" src="full logo.jpg" alt="Vel Tech Logo" class="mx-auto mb-2" />
@@ -92,7 +134,9 @@
                 <p id="wordCountError" class="text-red-500 text-xs hidden">Abstract cannot exceed 300 words.</p>
             </div>
 
-            <button type="button" onclick="generatePDF()" class="bg-primary text-primary-foreground hover:bg-primary/80 py-2 px-4 rounded-md">Generate PDF</button>
+           <button id="but"  onclick="generatePDF()"  class="button">
+  <span class="button-content">Download(Generate PDF) </span>
+</button>
         </form>
     </div>
 
