@@ -1,62 +1,33 @@
-# VV17 — Bankai Showcase Portal 🗡️
+# 📄 Community Service Project Submission Portal
 
-**VV17** is a visually immersive and responsive website dedicated to the legendary **Bankai** transformations from the anime **Bleach**.  
-Each page dives deep into the soul-cutting power of a different Shinigami, capturing the essence of their Bankai through clean UI, lore-focused content, and a minimalist aesthetic.
+This is a **web-based submission portal** designed for students to generate and download PDF forms related to their **Community Service Project (CSP)**. It allows students to:
+🔗 **Live Demo:** https://durgavamsi2004.github.io/vv17/
 
-🌐 **Live Preview:** [durgavamsi2004.github.io/vv17](https://durgavamsi2004.github.io/vv17/)
-
----
-
-## 📖 Project Overview
-
-As a developer and anime fan, I created **VV17** to showcase the true form of power revealed through Bankai — a theme symbolic of hidden potential and transformation. This single-page site features navigation to five detailed subpages, each focusing on a different iconic Bankai.
-
-### ✨ Features
-
-- 🎴 5 dynamic pages highlighting top Bleach Bankai
-- 📱 Fully responsive design for desktop and mobile
-- 💡 Simple HTML/CSS structure for fast loading
-- 🔗 Navigation that feels fluid and intuitive
+- Select a faculty guide.
+- Submit project title and description.
+- Automatically generate professional-looking PDFs for both Guide selection and Abstract submission.
 
 ---
 
-## 🗂️ Pages Included
+## 🔧 Features
 
-Each Bankai is presented on a dedicated page, featuring its name, user, and detailed description:
-
-1. **Ichigo Kurosaki** – Tensa Zangetsu  
-2. **Byakuya Kuchiki** – Senbonzakura Kageyoshi  
-3. **Shunsui Kyōraku** – Katen Kyōkotsu  
-4. **Rukia Kuchiki** – Hakka no Togame  
-5. **Tōshirō Hitsugaya** – Daiguren Hyōrinmaru
-
----
-
-## 🚀 Tech Stack
-
-- HTML5
-- CSS3
-- JavaScript (minimal)
-- GitHub Pages for deployment
+- ✅ Faculty Guide Selection with PDF export  
+- ✅ Abstract Submission with title, description, and participant details  
+- ✅ PDF generation using [`jsPDF`](https://github.com/parallax/jsPDF)  
+- ✅ User-friendly interface built with **Tailwind CSS**  
+- ✅ Download-ready formatted PDF files  
+- ✅ Responsive Design (Mobile & Desktop Friendly)
 
 ---
 
-## 🙏 Acknowledgements
+## 🧪 Technologies Used
 
-I’d like to thank the **creators of five YouTube videos** that inspired and informed the content of this website. Your analysis, creativity, and dedication helped elevate the quality of this project.
-
----
-
-## 📜 License
-
-This project is licensed under the [Apache License 2.0](LICENSE).
+- HTML5  
+- Tailwind CSS  
+- JavaScript (Vanilla)  
+- [jsPDF](https://github.com/parallax/jsPDF) for PDF generation  
 
 ---
 
-## 👤 Author
-
-**Durga Vamsi**  
-🔗 [GitHub](https://github.com/durgavamsi2004)
-
-Feel free to explore, fork, and contribute!
+## 🗂️ Project Structure
 
