@@ -1,7 +1,8 @@
 # 📄 Community Service Project Submission Portal
 
 This is a **web-based submission portal** designed for students to generate and download PDF forms related to their **Community Service Project (CSP)**. It allows students to:
--🌐 **Live Demo**: [Vist site](https://durgavamsi2004.github.io/CSE-Veltech/)
+
+🌐 **Live Demo**: [Vist site](https://durgavamsi2004.github.io/CSE-Veltech/)
 
 - Select a faculty guide.
 - Submit project title and description.
